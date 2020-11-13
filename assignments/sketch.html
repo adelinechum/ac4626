@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adeline Chum | Data Visualization taught by Jia Zhang</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3-scale-radial.js"></script>
+    <script src="./google_sheets.js">
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .slidecontainer {
+      width: 90%; /* Width of the outside container */
+      float: center;
+    }
+    </style>
+
+    </head>
+
+    <body>
+
+      <div class="weeks">Visualization of Alec Ankle Recovering from Sprain</div>
+
+
+      <div ></div>
+
+
+
+      <a href="https://docs.google.com/spreadsheets/d/1CTqlPCRD-LlC5bgyuNFw1UNgdunJtJ5HB3MPuUPSdto/edit?usp=sharing" target="_blank">Link to Measurement and Step Count Data of Alec's Foot</a><br>
+
+      <p>On September 19, Alec was playing tennis and sprained his ankle. We had to pick him up at Mount Sinani Hospital where the x-ray technicians commented on his ankle, "It looks like the tennis ball went into your foot!"<br><br>
+
+      This visualization looking at the inflammation and swelling of Alec's right foot over the fifteen days and how many step he took. Daily measurement were taken at two points (circumference 1 and 2 shown below) with a tailor's measuring tape. By using the pedometer on his iPhone, there is an additional layer of information showing how much Alec was able to walk and at what hours. </p>
+
+      <br><br><div style="font-size:20px; text-align: center;" > Use the slider below to see the changes over fifteen days! </b>
+
+      </div>
+
+      <div class="slidecontainer">
+        <input type="range" min="1" max="15" value="1" class="slider" id="myRange">
+      </div>
+
+      <br><br>
+      <div class="flex-container">
+        <div id="title" style="font-size:40px; text-align: center; background:black; width: 70%;color: white;">
+          </div>
+
+        <div style="text-align: center; min-width: 10%;">
+          <img src="ball.svg" alt="TENNIS BALL">
+        </div>
+
+        <div style="font-size:40px; text-align: left; background:black; width: 20%; color: #00ff00;">TENNIS BALL CIRCUMFERENCE <br> APPROX. 20.5CM</div>
+      </div>
+
+
+      <div class="flex-container">
+        <div id="my_dataviz" style="background:black; width: 70%; justify-content: space-between;"></div>
+        <div style="width:15%;">
+          <img src="Foot.svg" alt="Alec's Foot">
+        </div>
+        <div style="font-size:40px; text-align: left; background:black; width: 15%; color: #00FFFF;"><br><br><br><br>CIRCUMFERENCE 1<br><br><br><br><span style="color:#FF00FF;">CIRCUMFERENCE 2</span></div>
+
+
+      <img id="display_image" src="images/1.jpg" alt="alec's foot" style= "max-width:100%;">
+
+    </body>
+    <script type="text/javascript" src="sliding.js"></script>
+</html>
